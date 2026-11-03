@@ -14,6 +14,18 @@
 
 The **Trip Manager App** empowers travelers to organize their journeys with ease. Move beyond rigid, flat itineraries with a flexible recursive hierarchy (Days &rarr; Locations &rarr; Activities &rarr; Sub-items), visual timelines, document attachments, and real-time synchronization backed by Firebase.
 
+## 🎬 Application Demo
+
+### Video Walkthrough
+
+You can view or stream the full demo video directly using below link :
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1H9uFMAreQpz4tvNbXZ9WpfeDHAJDdlNB/view?usp=drive_link" target="_blank">
+    <img src="https://img.shields.io/badge/▶%20Watch%20Demo%20Video-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch Demo Video" />
+  </a>
+</p>
+
 ---
 
 ## ✨ Features
