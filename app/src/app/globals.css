@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0D1B2A;
+  --foreground: #E0E1DD;
+  --primary: #00B4D8;
+  --surface: rgba(27, 38, 59, 0.4);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-primary: #00B4D8;
+  --color-surface: rgba(27, 38, 59, 0.4);
+  --color-deep-navy: #0D1B2A;
+  --color-midnight: #1B263B;
+  --color-steel-blue: #415A77;
+  --color-slate-blue: #778DA9;
+}
+
+body {
+  background: var(--background);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 180, 216, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.1) 0px, transparent 50%);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgba(27, 38, 59, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #E0E1DD 0%, #778DA9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

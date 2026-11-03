@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trip Planner Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4f44e9",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container (Mobile Form Factor) -->
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Header Section -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-12 pb-4">
+<div class="flex items-center justify-between mb-4">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Trip Planner</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow-lg shadow-primary/30 transition-transform active:scale-90">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Quick Filter/Tabs -->
+<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold">Upcoming</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium">Past Trips</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium">Drafts</button>
+</div>
+</header>
+<!-- Main Feed -->
+<main class="flex-1 px-6 pb-24">
+<h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4 mt-2">Next Adventure</h2>
+<!-- Trip Card 1 -->
+<div class="group relative mb-6 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]">
+<div class="aspect-[16/9] w-full bg-cover bg-center" data-alt="Tropical beach with turquoise water and palm trees in Bali" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnfAAKQycxftS38U6SeHnZPPI1_E7fL1LifyrCjkGBTebf0Wj17FaVkpw70TDkftf3XXUlq_eG9uc8Wf7k37yTdB7tYUl91Od-WHhjS2Kw9pstkMcBxuYw4dkeOY66U6SXun50pnPWZbJO__X9u64KKj1IXklucXiHZbLqBDJhfsujSLuyyUMXK9RQQnFhPVIocVyfoJ1ZJVKd-HCSMacliSrtLCMNkzNUN3qtPIJDBb2AnUfToJD8LgXpJHSzIeKjOndCWGbMunNR');"></div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Summer in Bali</h3>
+<span class="text-xs font-semibold px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">Confirmed</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Aug 12 - Aug 20, 2024
+                    </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Profile picture of a travel companion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU_lFlcwMaD3oEXsIKL2IrdOVwGAHGzc3UyYgwehqmP9mzvax5VgFLmFWEHVQyNOs1X2fOLy03xMLSAjgSlpUh5t5OWxKjJubaKyZXIbDNd5t3iD-ZYuOGWZyyuP7bco39jqCE1m6s_w5KYQ2ravRYh-_foxO2aukQ9nOpyslsupj9aNPw1tsaKR3O84joEF2zKkUNuG7q_wsU2b9lja4nGe5ujhVUgVQMmhtKGIe9zAYjmZNdMxM7ySR6cZW8BsvH11CKqNJOE2wU"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Profile picture of another traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlk6o6LpyLsLpJOnDDi-pf_jqw-JqFzXIQF9vSCiceepFx5uyXX6PJ9XzNFZnqOBmKaPFbCk36-LcNQPqF-q7Srp-aVuh5bQzRTqIf9xHhOspU76POSoKWkMnux6uPclL5kAnPP1HatyqqmsT7taiC4SzqRut35aLRXnCu5rCva61Gixf_gY2v_hZuGp-fk_F-Nv6GzyvGieSjIX8MiH2tOqb5XaSPJXQVmJwBK94JVEkvIIgqUkMjoNTYWPw3htyZ48fcOaAv63E5"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-500">+1</div>
+</div>
+<button class="px-5 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold transition-colors hover:bg-primary hover:text-white">
+                            View Trip
+                        </button>
+</div>
+</div>
+</div>
+<h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4 mt-8">Upcoming</h2>
+<!-- Trip Card 2 -->
+<div class="group relative mb-6 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]">
+<div class="aspect-[16/9] w-full bg-cover bg-center" data-alt="Snow capped peaks of the Swiss Alps during sunrise" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBabW6meGe171glatmD065_8SJeMItrJupMbsAcHQwh3tWnWSmnxchLAFIDY4X_m5C5xYqd3w9OzTnAG8iQt-kpYjOYU1d-wy1aA3iv2suXLlClsuzzXesFZe2LXh9SH9Vt4swHzYwPqv101s3A8psFxjyExfGzICgVWnwqVGIMUY8V69rzu08tdfOYitMcgYiBPxWCUOprvVcZwhp-Ni24IH8hsVmEmxlAk05NzmuLgPMV7OevGO9u5u2l9UmyrMaIN0J1SeZL-Hrn');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight mb-1">Swiss Alps Trek</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Sep 05 - Sep 12, 2024
+                    </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Profile picture of a trekker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9u2UyUR6zDgFYqdxVoOeT0SgBbZPV8ijFwd8xVCMhXJy3y6hEc3iWK-LrmucGTjY3qLnL3R1kBoLejqTZ67bUDNRLFbvL3kD2pRx9wP82vovgAJpYr3UYnMUcOKOgQ_g9op9WNtsiJe896_aY0cbMArpg2g1cqPruLhI1-2-HBFGSQ3kVFTj-FMDvG3VfInba85WqyHaqDw34Dw6Fd36fSJs8PU6wKe9h2fP1vaC3TzGCfy3U6qKXcFGcbxXzhYMH8aIFXxVirgSl"/>
+</div>
+</div>
+<button class="px-5 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold transition-colors hover:bg-primary hover:text-white">
+                            View Trip
+                        </button>
+</div>
+</div>
+</div>
+<!-- Trip Card 3 -->
+<div class="group relative mb-6 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]">
+<div class="aspect-[16/9] w-full bg-cover bg-center" data-alt="Vibrant neon signs and city lights of Tokyo at night" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDREdYgOzUgUmIcvTG79tlWJGDDEaK9OrNRznVcSrmnDupaVunHl9Eo_npMxaEGA6VfMqarG72ZoWqza5T4zvx6oNwvSikTRewWAKWgLX4-9X76BCYutOCWYTKLqa5Cp0x6xTTlrngBxxo27OfDitWs147070NDgQVzvvCCAf76PGpxhZTUrX_5bs0v2fnrCRRaqB00EMIN8JIeULfPm8Cjf5tRuT4J0BEqdYvzgld00Vm92gY_6An_5X3uBfagFdrTV1sNbTydIK9j');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight mb-1">Tokyo City Lights</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Oct 22 - Oct 30, 2024
+                    </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Profile picture of a traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKXREWeO--MPfzdbzHCVQPSjLIHKSdyt5aWfR_3isBsmt_mk6-XzqtWghXr-p_NdRUzM_8EfIKGG_CtageAVRLHkmDKd9K9sn_ujq_TVY2UcV3ixByp7Wet0Y89zlH6cNyhg1HawO47VEbBl6cTsAp3OMnVlyfv_qZBKhu-F-6GXDUo6XPYY01X0cZNuc14-nlUdlxSoc53yRPwrvXVnLqfp33bndZudTT4mio6B4TxZ4v_GS3qybbLsXSi4vyeEjU7KSX_UdbXth5"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Profile picture of a second traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz8_v_iD-IR3AG5kZs71AtazFJaR2MhSeCSS1oVPwq7GQfQm6_zVbR9Skr7FvV4nRfMvlBJO-ygiqhgRWdFayMcoc7BR8AZSHBqvr4Jl66DAX0m4zlmrHlZRtqr-Zi9SiVP8yDj8JWSg94JgHeBbsScQi8lbQUihdKRRiuj8bia77m3N_CpgU2dqfIJgJFnP9K6xXl-J1FiY8qeQ8PaCCaWZwJnYx7nNXSnHT_5-7d2FqZuyAEAQXbv4CTx50JiiaxZriIFvZwrjpI"/>
+</div>
+</div>
+<button class="px-5 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold transition-colors hover:bg-primary hover:text-white">
+                            View Trip
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 pb-8 pt-3 flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined active-icon">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Guides</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-6 bg-white dark:bg-slate-900 w-full fixed bottom-0 max-w-md"></div>
+</div>
+</body></html>

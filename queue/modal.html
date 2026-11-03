@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plan a New Trip Modal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4f44e9",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<!-- Background Dashboard (Dimmed) -->
+<div class="fixed inset-0 z-0 overflow-hidden flex flex-col">
+<!-- Mock Dashboard Header -->
+<header class="flex items-center justify-between px-6 py-4 bg-white dark:bg-slate-900 border-b border-primary/10">
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">My Journeys</h1>
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</header>
+<!-- Mock Dashboard Content -->
+<main class="p-6 space-y-6">
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<div class="h-32 w-full rounded-lg bg-slate-200 dark:bg-slate-700 mb-3 overflow-hidden">
+<img class="w-full h-full object-cover opacity-50" data-alt="Eiffel Tower in Paris at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-SaD5qWhrjIiKOs-WNZP85pDbppHQp-fzY_6DCaMvAAxHXnfDQysUlQ0uTm3je_Ox-y8DNbcaSxqRmmtvl0qhRWP1TR_FFEPM70KfcDd5QZ-P_ZS0AklL6poX_10aKsMbM4Sdli32q4BkTIj6FKSy7jgNg4d1Fh29U6rg-BKk9D4lVWNOkEZ3-rDOqnjPTPHYiQ8EBY2T7yVKtmOv79Y0zBQf3jJ9PylZI7B-rM4T6tgUWI73aQ9TcgcU8e07wmjKIt18JByOfdLs"/>
+</div>
+<div class="h-4 w-1/3 bg-slate-200 dark:bg-slate-700 rounded mb-2"></div>
+<div class="h-3 w-1/2 bg-slate-100 dark:bg-slate-700 rounded"></div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<div class="h-32 w-full rounded-lg bg-slate-200 dark:bg-slate-700 mb-3 overflow-hidden">
+<img class="w-full h-full object-cover opacity-50" data-alt="Traditional Japanese temple in Kyoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUk5N3H1IKqmyMqqRbpC_vQsz2H_HTyyQRwaTy-JuC-zxUJt3mGeuvgxT-Amgh47tjAo6MG2xAyRc8vQlHCAxZIlZe9R-WoxxzYI9SVLsj0Infpe1ixYavY16MB_O7p2Fk7B2y-o-htujywSpBUNGzkbSNFGnHH0tLYtBii8wrleMyi83IOgBT5DhnNCmNhHNzx65rbfzgCacejDV5cRrWN00PkjXkez7swZPDZYQTmfBBfcKhzlZ_eWqrDCyBU8HwN1iuuXYH-2i9"/>
+</div>
+<div class="h-4 w-1/4 bg-slate-200 dark:bg-slate-700 rounded mb-2"></div>
+<div class="h-3 w-1/3 bg-slate-100 dark:bg-slate-700 rounded"></div>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal Overlay Backdrop -->
+<div class="fixed inset-0 z-10 bg-black/40 backdrop-blur-[2px] flex items-center justify-center p-4">
+<!-- Modal Container -->
+<div class="bg-white dark:bg-slate-900 w-full max-w-[420px] rounded-xl shadow-2xl overflow-hidden flex flex-col">
+<!-- Modal Header -->
+<div class="flex items-center justify-between px-6 pt-6 pb-2">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white leading-tight tracking-tight">Plan a New Trip</h2>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Content (Scrollable if needed) -->
+<div class="px-6 py-4 space-y-5">
+<!-- Trip Name Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Trip Name</label>
+<input class="w-full h-12 px-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="e.g., Summer in Tokyo" type="text"/>
+</div>
+<!-- Trip Dates Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Trip Dates</label>
+<div class="relative group">
+<input class="w-full h-12 pl-4 pr-11 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Select dates" type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+</div>
+</div>
+<!-- Cover Image Upload Area -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Cover Image</label>
+<div class="relative">
+<div class="flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-6 py-8 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">image</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Upload an image</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">JPG, PNG or GIF up to 10MB</p>
+</div>
+<button class="mt-2 px-4 py-1.5 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-600 shadow-sm" type="button">
+                                Select File
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer (Actions) -->
+<div class="flex items-center gap-3 p-6 mt-2 border-t border-slate-100 dark:border-slate-800">
+<button class="flex-1 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    Cancel
+                </button>
+<button class="flex-[1.5] h-12 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all">
+                    Create Trip
+                </button>
+</div>
+</div>
+</div>
+</body></html>
